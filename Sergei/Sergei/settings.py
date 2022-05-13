@@ -151,8 +151,8 @@ SERGEI = {
     },
     "DATA_STORE": {
         "POSTGRESQL": {
-            "OutstandingToken": True,
-            "BlacklistToken": True
+            "OutstandingToken": False,
+            "BlacklistToken": False
         },
         "REDIS": {
             "REQUIRED": False,

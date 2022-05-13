@@ -1,13 +1,10 @@
-from django.db import OperationalError
 import jwt
-from datetime import datetime, timedelta
+from datetime import datetime
 from django.contrib.auth import get_user_model
 from django.core.exceptions import ObjectDoesNotExist
 from Sergei import settings
 from authentication_app.utils.redis_helper import getTokenRedis, setTokenRedis
-from authentication_app.JWT.exceptions import TableNotFoundError
 
-from authentication_app.utils.response_handler import response_handler
 from authentication_app.models import BlacklistToken
 from authentication_app.utils.userConfig import getPref
 
@@ -46,7 +43,6 @@ class AuthHandler():
         payload = None
         try:
             payload = jwt.decode(token, self.JWT_SECRET, algorithms=['HS256'])
-            state = True
         except jwt.ExpiredSignatureError:
             error = jwt.ExpiredSignatureError
         except jwt.InvalidTokenError:
@@ -99,8 +95,8 @@ class AuthHandler():
 
     def check_token(self, token: str):
         """
-         Checks if a given token exists in the system and 
-         returns True if it is present else False 
+         Checks if a given token exists in the system and
+         returns True if it is present else False
          """
         if pref['Blacklist_REQUIRED'] is False and pref['USE_REDIS'] is False:
             # No Blacklisting required return False
@@ -110,7 +106,7 @@ class AuthHandler():
             try:
                 _ = BlacklistToken.objects.get(token=token)
                 return True
-            except ObjectDoesNotExist as error:
+            except ObjectDoesNotExist:
                 return False
 
         elif pref['USE_REDIS'] is True:

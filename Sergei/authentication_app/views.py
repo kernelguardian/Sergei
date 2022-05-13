@@ -1,12 +1,10 @@
 from rest_framework.views import APIView
-from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.permissions import AllowAny
 
 from django.contrib.auth import get_user_model
 
 from authentication_app.utils.response_handler import response_handler
 from authentication_app.JWT.core import AuthHandler
-
-from Sergei import settings
 
 
 auth = AuthHandler()
@@ -91,7 +89,7 @@ class Revoke(APIView):
 
 class Test(APIView):
     """
-    Tests the whole token functionalities and returns status 
+    Tests the whole token functionalities and returns status
     """
     permission_classes = (AllowAny, )
 

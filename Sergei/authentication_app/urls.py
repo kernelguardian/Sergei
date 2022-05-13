@@ -1,6 +1,6 @@
 from django.urls import path
 
-from authentication_app.views import Health, Generate, Validate, Refresh,  Test, Revoke
+from authentication_app.views import Health, Generate, Validate, Refresh, Test, Revoke
 
 
 urlpatterns = [

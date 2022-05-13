@@ -83,3 +83,6 @@ Use <a href="https://www.getpostman.com/collections/34eca3f12a93d192c160">Postma
 DOCUMENTATION WILL BE ADDED SOON
 
 DISCLAIMER: NOT INTENDED TO BE USED IN PRODUCTION
+
+
+# Lots of breaking changes incoming + expect a installable package soon because why not ¯\_(ツ)_/¯

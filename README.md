@@ -4,7 +4,7 @@ Sergei is a django app for JWT operations, completely customizable and flexible.
 
 Sergei lifts all the heavyweight for you, yes we also threw in redis into it, because why not ¯\\_(ツ)_/¯
 
-
+https://pypi.org/project/Sergei-JWT/
 ## Getting Started
 1. Please start with a virtualenvironment 
     ```bash

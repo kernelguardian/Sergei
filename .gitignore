@@ -2,3 +2,8 @@
 db.sqlite3
 Sergei/Sergei/.env
 .env
+*.whl
+*.gz
+build
+dist
+Sergei_JWT.egg-info

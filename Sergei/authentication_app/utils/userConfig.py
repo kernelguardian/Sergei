@@ -1,4 +1,4 @@
-from Sergei import settings
+from django.conf import settings
 
 
 try:

@@ -1,5 +1,5 @@
 import redis
-from Sergei import settings
+from django.conf import settings
 
 try:
     REDIS_CONFIG = settings.SERGEI['DATA_STORE']['REDIS']['CONNECTION']

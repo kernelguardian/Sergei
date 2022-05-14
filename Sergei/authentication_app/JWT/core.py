@@ -2,11 +2,12 @@ import jwt
 from datetime import datetime
 from django.contrib.auth import get_user_model
 from django.core.exceptions import ObjectDoesNotExist
-from Sergei import settings
+from django.conf import settings
 from authentication_app.utils.redis_helper import getTokenRedis, setTokenRedis
 
 from authentication_app.models import BlacklistToken
 from authentication_app.utils.userConfig import getPref
+
 
 pref = getPref()
 
